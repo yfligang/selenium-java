@@ -8,6 +8,7 @@ import java.util.Set;
 public class WebDriverDemo {
 
     public static void main(String[] args){
+        System.setProperty("hello","world");
         WebDriver webDriver = new WebDriver() {
             @Override
             public void get(String s) {
@@ -73,7 +74,9 @@ public class WebDriverDemo {
             public Options manage() {
                 return null;
             }
-        }
+        };
+
+        webDriver.close();
 
     }
 }
